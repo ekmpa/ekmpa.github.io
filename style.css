@@ -1,0 +1,226 @@
+@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+@import "https://fonts.googleapis.com/css2?family=Lexend+Deca";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:#221;
+}
+
+html, body {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 20px;
+  font-family: 'Press Start 2P';
+  font-size: .85rem;
+  line-height: 2;
+  height: auto;
+  overflow: auto;
+  background-color: #221;
+  color: #4FAF44;
+}
+
+.centerh {
+  height: 90%;
+}
+
+.head{
+  font-size: medium;
+}
+
+.beige-box {
+  background-color: #f5f5dc; /* Beige color */
+  padding: 20px;
+  border-radius: 10px; /* Rounded edges */
+}
+
+.hline {
+  color: grey;
+  border-bottom: 1pt; 
+  margin-top: 5pt;
+  margin-bottom: 10pt; 
+}
+
+.date {
+  color:#e0a840;
+  font-style: italic;
+}
+
+b.button:hover {
+  transform: scale(1.05); /* Slightly enlarges the text */
+  color: #ffcc00; /* Changes color on hover */
+  letter-spacing: 0.1em; /* Slightly increases the space between letters */
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.2);
+}
+
+
+h5 {
+  font-family: 'Josefin Sans';
+  font-size: xx-large;
+  color:#fff090;
+}
+
+li.downarrow {
+  color: red;
+}
+
+li.down-arrow::before {
+  color: #4FAF44;
+  content: '\2193'; 
+  vertical-align:middle; /* Adjust this value to lower or raise the arrow */
+}
+
+.dashed-line-green {
+  border: none; /* Remove the default border */
+  border-top: 2px dashed green; /* Set the dashed line style */
+  width: 100%; /* Make it span the full width of the screen */
+  margin: 0; /* Optional: Adjust margin if necessary */
+}
+
+.dashed-line-beige {
+  border: none; /* Remove the default border */
+  border-top: 2px dashed #fff090; /* Set the dashed line style */
+  width: 100%; /* Make it span the full width of the screen */
+  margin: 0; /* Optional: Adjust margin if necessary */
+}
+
+a.h4, h4 {
+  font-family: 'Lexend Deca';
+  font-size: large;
+  text-transform:capitalize;
+  color:#d35523;
+  line-height: 20pt;
+  padding-bottom: 6pt;
+}
+
+h4:hover {
+  transform: scale(1.05); /* Slightly enlarges the text */
+  transform-origin: 5%;
+  letter-spacing: 0.1em; /* Slightly increases the space between letters */
+  cursor: pointer;
+}
+
+.lieu {
+  font-style: italic;
+}
+
+li.simple-bullet {
+  color: #f5f5dc;
+  font-family: 'Lexend Deca';
+  font-size: medium;
+  padding-left: 20pt;
+}
+
+li.simple-bullet::before {
+  content: none;
+}
+
+.small-spacing {
+  line-height: 1.5; /* Adjust this value to reduce spacing */
+}
+
+li::before {
+  content: "\2192";
+}
+
+p.bio {
+  width: 80%;
+  padding: 7pt;
+  font-size: medium;
+  font-family: 'Lexend Deca';
+  color: #f5f5dc;
+  line-height: 15pt;
+}
+
+h2 {
+  font-family: 'Press Start 2P';
+  font-size: 1.55rem;
+  line-height: 2;
+  background-color: #221;
+  color: #4FAF44;
+}
+
+h1, h2, a { /* li */ 
+  transition: transform 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+  text-transform: uppercase;
+  /* color: #4FAF44;
+  content: "\2192";*/
+  padding: 10px;
+}
+
+.container {
+  height: 90vh;
+  size: 10%; 
+}
+
+.carousel-primary, 
+.carousel-secondary {
+  top: 36%; 
+  left: 10%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+}
+
+
+.carousel-primary img {
+  width: 100%;
+  object-fit: contain;
+  margin-left: 10px;
+  border-radius: 14px; 
+}
+
+.carousel-primary {
+  display: flex;
+  justify-content: space-around;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.carousel-secondary {
+  animation: scroll-horizontal 20s linear infinite; 
+  animation-delay: 10s; 
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    left: 100%; 
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+
+
+a:hover, li:hover {
+  transform: scale(1.05); /* Slightly enlarges the text */
+  color: #ffcc00; /* Changes color on hover */
+  letter-spacing: 0.1em; /* Slightly increases the space between letters */
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #d35523;
+}
+
+a {
+  text-decoration: none;
+  color: #fff090;
+}
+
+.arrow-right {
+  list-style-type: none; /* Remove default list bullets */
+  position: relative;    /* Enable positioning for the arrow */
+  /*padding-left: 30px;    /* Make space for the arrow and number */
+}
+
+
