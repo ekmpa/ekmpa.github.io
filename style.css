@@ -122,6 +122,18 @@ li.simple-bullet::before {
   content: none;
 }
 
+li.simple-bullet-2 {
+  color: #f5f5dc;
+  font-family: 'Lexend Deca';
+  font-size: medium;
+  padding-left: 20pt;
+}
+
+li.simple-bullet-2::before {
+  content: none;
+}
+
+
 .small-spacing {
   line-height: 1.5; /* Adjust this value to reduce spacing */
 }
@@ -200,7 +212,7 @@ h1, h2, a { /* li */
 
 
 
-a:hover, li:hover {
+a:hover, li.simple-bullet:hover {
   transform: scale(1.05); /* Slightly enlarges the text */
   color: #ffcc00; /* Changes color on hover */
   letter-spacing: 0.1em; /* Slightly increases the space between letters */
