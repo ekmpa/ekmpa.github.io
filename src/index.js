@@ -71,7 +71,7 @@ const simulation = d3.forceSimulation(nodes)
 const handleDownload = () => {
     const a = document.createElement("a");
     a.href = "./media/CV.pdf";
-    a.download = "CV.pdf";
+    a.download = "Emma-Kondrup-CV.pdf";
     a.click();
 };
 
