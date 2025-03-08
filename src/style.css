@@ -86,6 +86,23 @@ main {
     border-left: 2px solid black;
 }
 
+.box-half { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.box-half-noline { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
 .box-title { 
     margin: 10px; 
     font-family: 'Josefin Sans';

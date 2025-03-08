@@ -137,8 +137,8 @@ function dragStarted(event, d) {
 }
 
 function dragged(event, d) {
-    d.fx = Math.max(16, Math.min(width - 16, event.x));
-    d.fy = Math.max(16, Math.min(height - 16, event.y));
+    d.fx = Math.max(15, Math.min(width - 15, event.x));
+    d.fy = Math.max(15, Math.min(height - 15, event.y));
 }
 
 function dragEnded(event, d) {
