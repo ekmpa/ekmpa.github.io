@@ -28,6 +28,11 @@ main {
     
 }
 
+.code { 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
 .header {
     position: relative;
     display: flex;
