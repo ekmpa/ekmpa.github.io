@@ -116,17 +116,17 @@ node.on("mouseover", function(event, d) {
         if (link.target.id === d.id) affectedNodes.add(link.source.id);
     });
     
-    simulation.force("charge", d3.forceManyBody().strength(node => affectedNodes.has(node.id) ? -500 : -200));
+    simulation.force("charge", d3.forceManyBody().strength(node => affectedNodes.has(node.id) ? -300 : -200));
     simulation.alpha(0.5).restart();
 })
 .on("mouseout", function(event, d) {
     d3.select(this)
         .transition()
-        .duration(200)
+        .duration(300)
         .attr("width", 45)
         .attr("height", 45);
     
-    simulation.force("charge", d3.forceManyBody().strength(-200));
+    simulation.force("charge", d3.forceManyBody().strength(-10));
     simulation.alpha(0.3).restart();
 });
 
@@ -137,8 +137,8 @@ function dragStarted(event, d) {
 }
 
 function dragged(event, d) {
-    d.fx = Math.max(15, Math.min(width - 15, event.x));
-    d.fy = Math.max(15, Math.min(height - 15, event.y));
+    d.fx = Math.max(25, Math.min(width - 25, event.x));
+    d.fy = Math.max(25, Math.min(height - 25, event.y));
 }
 
 function dragEnded(event, d) {
