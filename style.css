@@ -245,17 +245,23 @@ main {
 
 .project-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Ensures first child isn't cut off */
     align-items: center;
     overflow-x: auto;
-    gap: 15px;
+    gap: 20px;
     padding: 15px;
-    width: 100%;
-    max-width: 800px;
-    /*border: 2px solid black;
-    border-radius: 15px;*/
+    max-width: 75vw;
     scroll-snap-type: x mandatory;
     margin-bottom: 50px;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
+    transition: mask-image 0.3s, -webkit-mask-image 0.3s;
+}
+
+.project-container.scrolled-to-end {
+    -webkit-mask-image: none;
+    mask-image: none;
 }
 
 

@@ -147,3 +147,23 @@ function dragEnded(event, d) {
     d.fy = null;
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".project-container");
+
+    const needsScroll = container.scrollWidth > container.clientWidth;
+
+    if (!needsScroll) {
+        container.classList.add("scrolled-to-end");
+        return;
+    }
+
+    container.addEventListener("scroll", function () {
+        const scrollEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 5;
+        
+        if (scrollEnd) {
+            container.classList.add("scrolled-to-end");
+        } else {
+            container.classList.remove("scrolled-to-end");
+        }
+    });
+});
