@@ -37,26 +37,22 @@ main {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; /*space-between;*/
+    justify-content: center; 
     width: 100vw;
     gap: 0px;
     padding-bottom: 30px;
-    /*border-bottom: 2px solid black;*/
 }
 
 .name { 
-    /*padding-left: 300px;*/
     font-family: 'Lexend Deca';
 }
 
 .graph {
     position: end;
-    /*padding-right: 20%;*/ 
 }
 
 .section-bottom-row { 
     width: 100vw;
-    /*border-bottom: 2px solid black;*/
     display: flex;
     border-top: 2px solid black;
     flex-direction: row;
@@ -70,9 +66,7 @@ main {
     flex-direction: column;
     padding: 5px;
     padding-top: 40px;
-    
 }
-
 
 .box-third { 
     width: 33vw;
@@ -107,7 +101,6 @@ main {
     flex-direction: column;
     padding: 10px;
     border-right: 2px solid black;
-    
 }
 
 .box-half-noline { 
@@ -206,14 +199,12 @@ main {
     padding: 10px;
     font-family: 'Lexend Deca';
     font-size: small;
-    
 }
 
 .vert-text {
     padding: 5px;
     text-align: center;
     font-size: small;
-
 }
 
 .tag-section { 
