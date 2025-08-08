@@ -1,630 +1,557 @@
 <!DOCTYPE html>
-<html style="height: 90%"; lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <meta http-equiv="refresh" content="0; url=/"> --> 
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emma Kondrup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ebecf0;
+      --text: #1e1e1e;
+      --subtle: #6c6f7e;
+      --muted: #656883;
+      --accent: #5773d9;
+      --radius: 12px;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      --card-bg: #ffffff;
+    }
+
+    .subheader {
+        font-size: 0.8rem;
+        color: var(--subtle);
+        font-weight: 400;
+        margin-top: 0.25rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #b5d0ec, #ebecf0);
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 900px;
+    }
+
+    .header-content img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .header-text {
+      text-align: left;
+      color: rgb(41, 24, 101);
+    }
     
-    <title>Emma Kondrup</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-  </head>
+    .workplace {
+        font-size: 0.9rem;
+        color: var(--accent);
+        font-weight: 400;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
 
-  <body>
-    <main>
+    .date-subtitle {
+        font-size: 0.85rem;
+        color: var(--subtle);
+        margin-top: 0.2rem;
+        margin-bottom: 0.5rem;
+    }
 
-        <div class="header"> 
-            <div class="graph">
-                <svg width="105vw" height="auto"></svg>
-            </div>
+    .header-text h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
 
-            <div>
-                <h1 class="name">
-                    Emma
-                    <br> 
-                    Kondrup
-                    
-                </h1>  
-                
-            </div>
-        </div>
-        
-        <div class="body">
+    .header-text p {
+      font-size: 1.rem;
+      color: #36328d;
+    }
 
-            <div class="section-bottom-row">
-                <div class="box-third">
-                    <div class="subcontainer-bottom">
+    nav {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-                        <div class="quarter-container">
-                            <header class="box-title">
-                                Education
-                            </header>
-        
-                            <div class="text-box">
-                                
-                                <b class="head">BS.c Honours Computer Science</b>
-                                <br> 
-                                <i><b> 
-                                    McGill University
-                                </b> 
-                                    (CGPA: 3.7/4.0)
-                                </i>
-                            </div>
-                            
-                        </div>
+    nav a {
+      font-weight: 500;
+      color: var(--subtle);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-                        <div class="text-box">
-                            
-                            Courses include Machine Learning, Network Science, Modern Computer Games. 
-                    
-                        </div>
-                </div>
-                
-                <div class="subcontainer">
-                    
-                    <header class="box-title">
-                        Extracurriculars
-                    </header>
-                    
-                    <div class="text-box">
-                        <li> <b>
-                            IOP Peer Review Excellence Course</b>, 
-                            <i> IOP Publishing </i> (2025).
-                            <br>
+    nav a:hover {
+      color: var(--accent);
+    }
 
-                        <li> <b>
-                            Technical Project Manager</b>, 
-                            <i> McGill AI Society</i> (2024 - ).
-                            <br>
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
 
-                        <li> <b>Hackathons: </b> 
-                            <i> HackHarvard</i> (2023), 
-                            <i> CodeJam</i> (2023 & 2024).  
-                            <br> 
+    section {
+      margin-bottom: 5rem;
+    }
 
-                        <li> Member of the 
-                            <i>McGill Biomechanics Club</i> (2022 - 2023).
-                        </li>
-                    </div>
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+    }
 
-                </div>
-                <div style="border-top: 2px solid; padding: 10px; font-size: 12px; padding-left: 15px">
-                    Read some more by downloading my CV in the graph! 
-                </div>
-            </div>
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
 
-            <div class="box-twothirds">
+    .card:hover {
+      transform: translateY(-4px);
+    }
 
-                <header class="box-title">
-                    Experience
-                </header>
+    .card strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+    }
 
-                <div class="vert-section">
-                    <div class="vert-box">
+    .card em {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
-                        <div class="vert-title">
-                            Student Researcher in AI applications with social benefits
-                        </div>
-                        
-                        <div class="vert-text">
-                            <i>Complex Data Lab at Mila - Quebec Artificial Intelligence Institute, under the supervision of Prof. Reihaneh Rabbany </i>
-                        </div>
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-top: 1px solid #d0d0dd;
+    }
 
-                        <div class="vert-text">
-                            <b class="date"> ( May 2025 - ) </b>
-                        </div>
-                        
-                    </div>
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-                    <div class="vert-box">
+    a:hover {
+      text-decoration: underline;
+    }
 
-                        <div class="vert-title">
-                            Research Assistant in Bioscience Innovation Law
-                        </div>
-                        
-                        <div class="vert-text">
-                            <i>University of Copenhagen, Faculty of Law, Center for Advanced Studies in Bioscience Innovation Law (CeBIL)</i>
-                        </div>
+    .hidden-publication {
+    display: none;
+    }
 
-                        <div class="vert-text">
-                            <b class="date"> ( July 2024 - ) </b>
-                        </div>
-                        
-                    </div>
+    .toggle-research {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-top: 0.5rem;
+    user-select: none;
+    transition: transform 0.2s ease;
+    }
 
-                    <div class="vert-box">
+    .toggle-research:hover {
+    transform: scale(1.1);
+    }
+  </style>
+</head>
 
-                        <div class="vert-title">
-                            Member of research Workstream on GenAI & ML
-                        </div>
-
-                        <div class="vert-text">
-                            <i>
-                                Global Alliance for Genomics and Health (GA4GH) Regulatory and Ethics Workstream (REWS)
-                            </i>
-                        </div> 
-                        
-                        <div class="vert-text">
-                            <b class="date"> 
-                                ( Feb 2024 - ) 
-                            </b>
-                        </div>
-
-                    </div>
-
-                    <div class="vert-box">
-
-                        <div class="vert-title">
-                            Research Assistant in Bioethics & Digital Medicine
-                        </div>
-
-                        <div class="vert-text">
-                            <i>
-                                McGill Genome Centre for Genomics and Policy (CGP) 
-                                & Genetic Discrimination Observatory (GDO)
-                            </i>
-                        </div>
-
-                        <div class="vert-text">
-                            <b class="date"> 
-                                ( Dec 2022 - Aug 2024 ) 
-                            </b>
-                        </div>
-
-                    </div>
-
-                    <div class="vert-box"> 
-
-                        <div class="vert-title">
-                            Research Intern in Ethics of AI
-                        </div>
-
-                        <div class="vert-text">
-                            <i>
-                                Prof. Boris Düdder at the University of Copenhagen (Data Institute, DIKU)
-                            </i>
-                        </div>
-
-                        <div class="vert-text">
-                            <b class="date"> 
-                                ( May - June 2023 ) 
-                            </b>
-                        </div>
-                    </div>
-
-                    <div class="vert-box">
-
-                        <div class="vert-title">
-                            Research Intern in Cognitive Science
-                        </div>
-
-                        <div class="vert-text">
-                            <i>
-                                Prof. Fabienne Chétail at the Université Libre de Bruxelles
-                                (Laboratoire Cognition Langage et Développement, LCLD)
-                            </i>
-                        </div>
-
-                        <div class="vert-text">
-                            <b class="date"> 
-                                ( February 2020 ) 
-                            </b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
+<body>
+  <header>
+    <div class="header-content">
+      <img src="../media/portrait.jpg" alt="Emma Kondrup portrait" />
+      <div class="header-text">
+    <h1>Emma Kondrup</h1>
+    <p>Mila – Quebec AI Institute · CeBIL (University of Copenhagen) · McGill University </p>
+    <p class="subheader">Montreal, Canada</p>
     </div>
-</div>
+    </div>
+  </header>
 
-<div class="section-bottom-col" style="align-items: center;">
-
-    <header class="box-title">
-        Publications
-    </header>
+  <nav>
+    <!-- <a href="#about">About</a> -->
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#talks">Talks</a>
+    <a href="#media">Media</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
     
-    <div class="project-container">
+  </nav>
 
-        <div class="pubs-card">
-            <a href="https://arxiv.org/pdf/2506.12764" target="_blank">
-                <img 
-                    src="./media/Base3.png" 
-                    alt="Preprint" 
-                    style="height: 120px;">
+  <main class="container">
+    <!-- <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>Honours Computer Science student. 
+            <br> 
+            <i>Temporal Graph Learning; Graph ML; ML for Information Integrity; AI in Health; AI, Health and Tech Law. </i>
+      </div>
+    </section> -->
 
-                <div class="project-title">
-                    <i><b>
-                        Base3: a simple interpolation-based ensemble method for 
-                        robust dynamic link prediction
-                    </b></i> 
-                    <br><br>
-                    <i>Temporal Graph Learning workshop @ KDD 2025</i>    
-                </div>
-            </a>
+    <section id="research">
+  <h2>Research</h2>
 
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2025
-                </div>
-            </div>
-        </div>
-
-        <div class="pubs-card">
-            <a href="https://arxiv.org/abs/2506.05393" target="_blank">
-                <img 
-                    src="./media/LLM_TG.png" 
-                    alt="Preprint" 
-                    style="height: 120px;">
-
-                <div class="project-title">
-                    <i><b>
-                        Are Large Language Models Good Temporal Graph Learners?
-                    </b></i> 
-                    <br><br>
-                    <i>Pre-print, submission to NeurIPS 2025</i>    
-                </div>
-            </a>
-
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2025
-                </div>
-            </div>
-        </div>
-
-
-        <div class="pubs-card">
-            <a href="https://petrieflom.law.harvard.edu/2025/04/11/informed-consent-redefined-how-ai-and-big-data-are-changing-the-rules/" target="_blank">
-                <img 
-                    src="./media/informed_consent.png" 
-                    alt="Harvard's Bill of Health" 
-                    style="height: 120px;">
-
-                <div class="project-title">
-                    <i><b>
-                        Informed Consent, Redefined: <br> 
-                        How AI and Big Data are changing the Rules
-                    </b></i> 
-                    <br><br>
-                    <i>Harvard's <br> Bill of Health</i>    
-                </div>
-            </a>
-
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2025
-                </div>
-            </div>
-        </div>
-
-        <div class="pubs-card">
-            <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2824110" target="_blank">
-                <img 
-                    src="./media/delphi.png" 
-                    alt="Delphi Study, GDO" 
-                    style="padding: 10px; width: 160px; height: auto;">
-
-                <div class="project-title">
-                    <i><b>
-                        The Key Features of a Genetic Nondiscrimination Policy:
-                        A Delphi Consensus Statement
-                    </b></i> 
-                    <br><br>
-                    <i>JAMA Netw. Open</i>    
-                </div>
-            </a>
-
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2024
-                </div>
-            </div>
-        </div>
-
-        <div class="pubs-card">
-            <a href="https://www.genomicsandpolicy.org/ressources/32.pdf" target="_blank">
-                <img 
-                    src="./media/hanshi-thesis.png" 
-                    alt="GA-research" 
-                    style="width: 180px; height: auto;">
-
-                <div class="project-title">
-                    <i><b>
-                        The Ethical Issues Associated with the Use of Genetic Ancestry in Genomics Research: 
-                        A Mixed-Methods Systematic Literature Review
-                    </b></i> 
-                    <br>
-                </div>
-                
-                <div class="project-title">
-                    <i>SSHRC, McGill Thesis</i>    
-                </div>
-            </a>
-
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2024
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="pubs-card">
-            <a href="https://www.facetsjournal.com/doi/full/10.1139/facets-2023-0101" target="_blank">
-                <img 
-                    src="./media/facets.png" 
-                    alt="instant-curry"  
-                    style="width: 180px; height: auto;">
-                
-                <div class="project-title">
-                    <i><b>
-                        Still using genetic data? 
-                        A comparative review of Canadian life insurance application forms before and after the GNDA.
-                    </i> </b>
-                    <br>
-                </div>
-                
-                <div class="project-title">
-                    <i>Facets</i>
-                </div>
-            </a>
-
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2024
-                </div>
-            </div>
-        </div>
-
-        <div class="pubs-card">
-            <a>
-                <img 
-                    src="./media/team-logo.png" 
-                    alt="Telehealth Study Team" 
-                    style="padding-left: 20px; padding-right: 20px; width: 140px; height: auto;">
-
-                <div class="project-title">
-                    <i><b>
-                        Consultation citoyenne pour l’évaluation de l’expérience usager en télésanté : rapport final.
-                    </b></i> 
-                    <br><br>
-                    <i>
-                        Internal, with the Québec MSSS Ministry and McGill Health Centre.
-                    </i>    
-                </div>
-            </a>
-
-            <div class="tag-section">
-                <div class="pub-tag">
-                    2023
-                </div>
-            </div>
-        </div>
+  <div class="research-group">
+    
+     <div class="card">
+      <a href="https://arxiv.org/abs/2506.05393" style="color:#1e1e1e;">
+        <strong>Are Large Language Models Good Temporal Graph Learners?</strong>
+      </a>
+      <em>Submitted to NeurIPS 2025.
+        <br>
+        Huang, S. Parviz, A. <b>Kondrup, E.</b> Yang, Z. Ding, Z. Bronstein, M. Rabbany, R. Rabusseau, G.
+        </em>
     </div>
 
-<div class="section-bottom-row">
-
-    <div class="box-half">
-        <header class="box-title">
-            Talks & teaching
-        </header>
-
-        <div class="text-box">
-            <li> <b>Honours Project,</b> 
-                <i> « Instant-Curry: a Boundless Proof Auto-Grader for teaching Functional Programming Theory » </i>
-                (Conference of McGill's Epic Programming Language Systems)
-                <br>
-        
-            <li> <b>Workshop Leader,</b> 
-                <i> « Python Libraries for Machine Learning » </i>
-                (McGill AI Society’s 2025 Hackathon, Canada's Largest AI Hackathon!)
-                <br>
-        
-            <li> <b>Technical Mentor and Final Judge</b> 
-                (McGill AI Society’s 2025 Hackathon)
-                <br>
-            
-            <li> <b>Guest Lecturer, </b> 
-                <i> 
-                    « Enjeux éthiques, sociaux et légaux en médecine génétique de précision »
-                </i> 
-                (MMO-7031 - Université de Laval, bioethics microcapsule)
-                <br> 
-
-            <li> <b>Speaker, </b> 
-                <i> « The song remains the same? 
-                    A comparative assessment of Canadian life insurance application forms post-GNDA » 
-                </i> 
-                (GDO 5th Annual Conference)
+    <div class="card">
+      <a href="https://arxiv.org/pdf/2506.12764" style="color: #1e1e1e;">
+        <strong>Base3: a simple interpolation-based ensemble method for robust
+        dynamic link prediction</strong>
+      </a>
+      <em>Temporal Graph Learning Workshop @ KDD 2025.
+      <br><b>Kondrup, E.</b>
+        </em>
+    </div>
     
-            </div>
-        </div>
+    <div class="card">
+      <a href="https://petrieflom.law.harvard.edu/2025/04/11/informed-consent-redefined-how-ai-and-big-data-are-changing-the-rules/" style="color: #1e1e1e;">
+        <strong>Informed Consent, Redefined: How AI and Big Data Are Changing the Rules</strong>
+      </a>
+      <em>Harvard's Bill of Health, 2025. <br> 
+        <b>Kondrup, E.</b></em>
+    </div>
 
-        <div class="box-half-noline">
+    <!-- Hidden-by-default -->
+    <div class="card hidden-publication">
+        <a href="https://watermark.silverchair.com/uberoi_2024_cs_240009_1726754321.30279.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA00wggNJBgkqhkiG9w0BBwagggM6MIIDNgIBADCCAy8GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM_plwyJ1pDx_H8d8gAgEQgIIDAIv8R-0yR57xXGMl9zGgN-95mxuUsGEjvGVvRLS7M_83cliVYdg7crz4tigRk0dx4Ms9Q9DSveXc7GhtI6P_YkxSNCRr20rc682uFytrnoi7UNdVCAfcX-qslxei2eIwSGxbo0YVhX_OhkBSYDs-jPamGKAWHBqpPgCfs2amlKxzMH4S0aFcPHQ97Ecm5G1RqTqDJp5gVApZna1PX__qJVZcVnGP4YM38IniD2FGs9XnbTK2kpm_LF4VK4E_Ir7FrGkr9TqD8nA-zMCBeH79QUbGWOLprDlVmi1uFHBrurn-uL2OAHcnxhjlzk5Lyq3--PyfwjHRT-lPypiz5tFexKpeYG-mY-61pNeAsBXGrwfenB8BUbbOfHs2u2i0kMgVdOa6xcXnE2rui_RCstMRy0I8QlBDKgOqKUdcypKpKBA2ChK_Cu7xbF9JgSWAXKKF6kotm6-nD_VNkl6XZfeilLDZ61GoORYRNYP4QGDPiaQGPFKpCnR2_h-ecnnFfPm4BZb1nsxUhFsoQ-eeGi4dhnZaVd97YJAVDUOy0xJF4P1PZY7YMC_wdrwEQAcFQk1V8WQIi6UoEGV8WqPJ2-o0EVhbImvGilPBpejtkyEgu7kZLOqkgmSZ22s6aHwB4krgTVjiZMKiciaTfmmMOCSQC7EuPdS7p-Y9IMbYxqtR1c1mVvYnO_Go2DOsespVCzd_vvpbjiE7oe6sT_zC_ZYJC3jf5hG-J1ziSRBvmqaX97Mid8WmMuV_Du_hC2fNGZuC-X2xL1Lv-8TaWmnU4P7PdBqODkOQT9unvb2saV4lbRSdfGHw0Apfx4wemvXbMqHPBtUYzwPFjy4Nm5uzAL1e9EcQMF3DxEtK9yJinZ7CIyN4waHR02LpnC7v5PSmjEOwladeVrTBFBRv2mzZyenGGLEXpuid-AQpcqDqiG5rwckjPkwocbUZS7CU86KDJHIZEDaYO-q0Y9wdq_0Hz-E64MX418Np1LEYC9jPm9BJDZNXch6i-qn-ibkf0W0IeHKzaQ" style="color: #1e1e1e;">
+            <strong>The Key Features of a Genetic Nondiscrimination Policy: A Delphi Consensus Statement</strong>
+        </a>
+        <em>
+        JAMA Network Open, 2024.
+        <br> 
+        Uberoi, D. Dalpé, G. Cheung, K. <b>Kondrup, E.</b> Palmour, N. Arawi, T. Arych, M. Aviles, M. A. R. Ayuso, C. Bentzen, H. B. Blizinsky, K. 
+        Bombard, Y. Chandrasekharan, S. Chung, B. H. Y. de Paor, A. Doerr, M. Dove, E. S. Dupras, C. Granados-Moreno, P. Greenbaum, D. Gunnarsdóttir, H. D. Haidar, H. Ho, C. Jamuar, S. S.
+        Kim, H. Lebret, A. Macdonald, A. Minssen, T. Nasir, J. Nicol, D. Nicolás, P. Otlowski, M. Nair, A. P. S. Prince, A. E. R. Rothstein, M. Ryan, R. Sillon, G. 
+        Singh, K. K. Stedman, I. Tiller, J. van Howyeghen, I. Zawati, M. Joly, Y. 
+      </em>
+    </div>
 
-            <header class="box-title">
-                Media
-            </header>
+    <div class="card hidden-publication">
+    <a href="https://www.sshrc-crsh.gc.ca/society-societe/community-communite/ifca-iac/evidence_briefs-donnees_probantes/sdpm-edpm/joly-eng.aspx" style="color: #1e1e1e;"> 
+      <strong> The Ethical Issues Associated with the use of Genetics 
+        Ancestry in Genomics Research: A Mixed-Methods Systematic Literature Review
+      </strong>
+      </a>
+      <em>SSHRC & McGill Thesis, 2024.  <br> 
+        Liu, H. <b>Kondrup, E.</b> Joly, Y. </em>
+    </div>
 
-            <div class="text-box">
-                
-                <li> <b> 
-                    <a href="https://usbeketrica.com/fr/article/demain-sera-t-on-discrimine-par-nos-genes">
-                        Usbek & Rica
-                    </a></b>, 
-                    <i> 
-                        Interviewed and quoted in the 43th Ed. on Genetic Discrimination.
-                    </i>
-                    <br>
+    <div class="card hidden-publication">
+        <strong>
+            Public Opinion Survey on Telemedicine Care Delivery in Quebec 
+        </strong>
+        <em>
+            For the Ministry of Health and Social Services of Quebec, in collaboration with the McGill Health Centre, 2023.
+            <br>
+            Ells, C. Palmour, N. <b>Kondrup, E.</b> Ghanem, A. Grenier, L.
+            
+        </em>
+    </div>
 
-                <li> <b>
-                    <a href="https://phys.org/news/2024-01-canadians-genetic-discrimination-federal-law.html">
-                        Phys.org
-                    </a>, </b> 
-                    
-                    <i> 
-                        Press release on the "Still Using Genetic Data?" study.
-                    </i>
-                    <br> 
+    <div class="card hidden-publication">
+        <a href="https://www.facetsjournal.com/doi/full/10.1139/facets-2023-0101" style="color: #1e1e1e;">
+        <strong>
+            Still using genetic data? A comparative review of Canadian life insurance application forms before and after the GNDA.
+        </strong>
+        </a>
+        <em>
+            FACETS, 2023.
+            <br>
+            Fernando, A. <b> Kondrup, E.</b> Cheung, K. Uberoi, D. Joly, Y. 
+        </em>
+    </div>
 
-                <li> <b>
-                    <a href="https://www.mcgill.ca/newsroom/channels/news/mcgill-study-finds-some-canadians-may-still-be-risk-genetic-discrimination-despite-new-federal-law-355104">
-                        The McGill Newsroom</a>, </b> 
-                    <i> 
-                        Press release on the "Still Using Genetic Data?" study.
-                    </i>
-                    <br> 
-            </div>
-        </div>
+
+    <div class="toggle-research" onclick="toggleResearch()">
+      <span id="toggle-icon">▼</span>
+    </div>
+  </div>
+</section>
+
+
+<section id="experience">
+  <h2>Experience</h2>
+
+    <div class="card">
+        <strong>
+            Research Intern <span class="workplace">@ Mila - Quebec AI Institute</span>
+        </strong>
+        <div class="date-subtitle">May 2025 - Present </div>
+        <p>In Prof. Reihaneh Rabbany's <i>Complex Data Lab</i>, focusing on Graph ML, Temporal Graph Learning, and ML applications for Information Integrity.</p>
+    </div>
+
+    <div class="card">
+        <strong>
+            Student Research Assistant <span class="workplace">@ University of Copenhagen, Faculty of Law</span>
+        </strong>
+        <div class="date-subtitle">July 2024 - Present </div>
+        <p>In Prof. Timo Minssen's <i> Center for Advanced Studies in Bioscience Innovation Law (CeBIL)</i>, focusing on Health, Tech and AI Law.</p>
+    </div>
+
+    <div class="card">
+        <strong>
+            Member of the Regulatory & Ethics Work Stream (REWS) on Generative AI and Machine Learning <span class="workplace">@ Global Alliance for Genomics and Health (GA4GH)</span>
+        </strong>
+        <div class="date-subtitle">February 2024 - Present </div>
+        <p>International collaborative group. Also a member of the REWS on Genetic Discrimination.</p>
+    </div>
+
+    <div class="card">
+        <strong>
+            Research Assistant <span class="workplace">@ Genetic Discrimination Observatory</span>
+        </strong>
+        <div class="date-subtitle">March 2024 - September 2024 </div>
+        <p>International research observatory focusing on Genetic Discrimination. </p>
+    </div>
+
+    <div class="card">
+        <strong>
+            Research Assistant <span class="workplace">@ McGill University, Faculty of Law</span>
+        </strong>
+        <div class="date-subtitle">December 2022 - September 2024 </div>
+        <p>In Prof. Yann Joly's <i>Centre for Genomics and Policy</i>, focusing on Genetic Discrimination and Health & Tech Law. </p>
+    </div>
+
+    <div class="card">
+        <strong>
+            Research Intern <span class="workplace">@ Department of Computer Science (DIKU), University of Copenhagen</span>
+        </strong>
+        <div class="date-subtitle">May 2023 - June 2023 </div>
+        <p>In Prof. Boris Düdder's <i>Software Engineering & Formal Methods Research Group</i>, focusing on AI Ethics in Individualized Medicine. </p>
+    </div>
+
+    <div class="card">
+        <strong>
+            Research Intern <span class="workplace">@ Université Libre de Bruxelles</span>
+        </strong>
+        <div class="date-subtitle"> February 2020 </div>
+        <p>In Prof. Fabienne Chétail's <i>Centre for Research in Cognition & Neurosciences.</i> </p>
     </div>
 
     
 
-        <div class="section-bottom-col" style="align-items: center;">
-
-            <header class="box-title">
-                Projects
-            </header>
-
-            <div class="project-container">
-
-                <div class="project-card">
-                    <a 
-                        href="https://github.com/ekmpa/SignLanguage" 
-                        target="_blank"
-                    >
-                        
-                        <img 
-                            src="./media/MLP.png" 
-                            alt="SLT" 
-                            style="padding: 10px; width: 160px; height: auto;">
-                        
-                        <div class="project-title">
-                            Multi-Layer Perceptron Implementation in Python 
-                            (& compared with PyTorch CNN)
-                            for Sign Language Translation 
-                        </div>
-                
-                    </a>
-                    
-                    <div class="tag-section">
-                        <div class="tag">
-                            ML
-                        </div>
-                    </div>
-                </div>
+</section>
 
 
-                <div class="project-card">
-                    
-                    <img 
-                        src="./media/instant-curry.png" 
-                        alt="instant-curry"  
-                        style="width: 180px; height: auto;">
+<section id="talks">
+    <h2>Talks & teaching</h2>
 
-                    <div class="project-title">
-                        Educational Programming Proof Autograder
-                        implemented in OCaml in a
-                        React-based & Supabase-powered interface. 
-                    </div>
-                
-                <div class="tag-section">
-                    <div class="tag">
-                        Full Stack Dev
-                    </div>
-                </div>
+    <div class="card">
+        <strong>Technical Project Manager <span class="workplace">@ McGill AI Society</span></strong>
+        <div class="date-subtitle"> April 2024 - Present </div>
+        <p> Supervising students of <i>MAIS 202 - Accelerated Introduction to Machine Learning</i> and mentoring attendees of our Hackathons, for which I also act as Final Judge.</p>
+    </div>
 
-            </div>
-                <div class="project-card">
-                    <a href="https://ekmpa.github.io/Network-Science/"
-                    target="_blank"
-                    >
-                        
-                    <img 
-                        src="./media/netw_sci.png" 
-                        alt="netw-sci"  
-                        style="width: 170px; padding-left: 7px; padding-right: 4px; height: auto;">
-    
-                    <div class="project-title">
-                        <div class="code">NETW-SCI-EXPLORER:</div>
-                        A Graph Algorithm 
-                        Visualization platform
-                        using D3.js
-                    </div>
-                </a>
-                <div class="tag-section">
-                    <div class="tag">
-                        Network Science
-                    </div>
-                </div>
-            
-            </div>
+    <div class="card">
+        <strong>Workshop Presentation: <i>Base3</i> <span class="workplace">@ KDD 2025</span></strong> 
+        <div class="date-subtitle"> 2025 </div>
+        <p>
+            Presented "Base3: a simple interpolation-based ensemble method for robust
+dynamic link prediction" in the Temporal Graph Learning Workshop.
+        </p>
+    </div>
 
-            <div class="project-card">
-                <a href="https://ekmpa.github.io/vision-demos/"
-                target="_blank"
-                >
-                    
-                <img 
-                    src="./media/vision-demos.png" 
-                    alt="vision-demos"  
-                    style="width: 170px; padding-left: 7px; padding-right: 4px; height: auto;">
+    <div class="card">
+        <strong>Honours Thesis: <i>Instant-Curry</i> <span class="workplace"> @ Conference of McGill's Epic Programming Language Systems </span></strong>
+        <div class="date-subtitle"> Winter 2025 </div>
+        <p>
+            Presented "Instant-Curry: a Boundless Proof Auto-Grader for teaching Functional Programming Theory", project supervised by Prof. Jacob Errington.
+        </p>
+    </div>
 
-                <div class="project-title">
-                    <div class="code">VISION-DEMOS:</div>
-                    Visualization of computer vision algorithms such as 
-                    Procedural Content Generation (PCG)
-                    in JavaScript
-                </div>
-            </a>
-            <div class="tag-section">
-                <div class="tag">
-                    Computer Vision
-                </div>
-            </div>
+    <div class="card">
+        <strong>Workshop Presentation: <i>Python Libraries for Machine Learning</i> <span class="workplace">@ MAIS Hackathon </span></strong> 
+        <div class="date-subtitle"> 2025 </div>
+        <p>
+            Led a workshop on "Python Libraries for Machine Learning" at the McGill AI Society's 2025 Hackathon (the largest AI hackathon in Canada!)
+        </p>
+    </div>
+
+     <div class="card">
+        <strong>Guest Lecturer in Bioethics<span class="workplace">@ Université de Laval</span></strong> 
+        <div class="date-subtitle"> 2024 </div>
+        <p>
+            Presented in the MMO-7031 <i>"Enjeux éthiques, sociaux et légaux en médecine génétique de précision"</i>  bioethics microcapsule.
+        </p>
+    </div>
+
+     <div class="card">
+        <strong>Conference Presentation of GNDA Legal Analysis<span class="workplace">@ GDO's 5th Annual Conference (Panama)</span></strong> 
+        <div class="date-subtitle"> 2024 </div>
+        <p>
+            Presented "The song remains the same? A comparative assessment of Canadian life insurance application forms post-GNDA". 
+        </p>
+    </div>
+</section>
+
+
+<section id="media">
+    <h2>Media</h2>
+
+    <div class="card">
+        <a href="https://usbeketrica.com/fr/article/demain-sera-t-on-discrimine-par-nos-genes" style="color:#1e1e1e"><strong>Usbek & Rica</strong></a>
+        <em> Interviewed and quoted in the 43th edition on Genetic Discrimination.</em>
+    </div>
+
+    <div class="card">
+        <a href="https://phys.org/news/2024-01-canadians-genetic-discrimination-federal-law.html" style="color: #1e1e1e"><strong>
+            Phys.org
+        </strong></a>
+        <em>
+            Press release on the 2023 “Still using Genetic Data?” article.
+        </em>
+    </div>
+
+    <div class="card">
+        <a href="https://www.mcgill.ca/newsroom/channels/news/mcgill-study-finds-some-canadians-may-still-be-risk-genetic-discrimination-despite-new-federal-law-355104" style="color: #1e1e1e">
+        <strong>
+            McGill Newsroom
+        </strong>
+        </a>
+        <em>
+            Press release on the 2023 “Still using Genetic Data?” article.
+        </em>
+    </div>
+</section>
+
+
+
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+        <strong>AI Safety<span class="workplace">@ Mila - Quebec AI Institute</span></strong>
+        <div class="date-subtitle"> Summer 2025 </div>
+        <p>
+            Audited the course, taught by Prof. David Krueger.
+        </p>
         
-        </div>
+    </div>
 
-            
+    <div class="card">
+        <strong>IOP Peer Review Excellence Course <span class="workplace">@ IOP Publishing</span></strong>
+        <div class="date-subtitle"> March 2025 </div>
+        
+    </div>
 
-                
-                
-            <div class="project-card">
-                
-                <a 
-                    href="https://github.com/ekmpa/Frogger" 
-                    target="_blank">
+    <div class="card">
+        <strong>Health and Life Science Law <span class="workplace">@ University of Copenhagen, Faculty of Law</span></strong>
+        <div class="date-subtitle"> Fall 2024 </div>
+        <p>
+            Audited and helped organize the course. 
+        </p>
+        
+    </div>
 
-                    <img 
-                        src="./media/frogger.png" 
-                        alt="Frogger"  
-                        style="width: 180px; height: auto;"
-                    >
+    <div class="card">
+        <strong>Honours Computer Science <span class="workplace">@ McGill University</span></strong>
+        <!-- <div class="date-subtitle"> April 2024 - Present </div> -->
+        <p> CGPA of 3.7/4.0.</p>
+    </div>
 
-                    <div class="project-title">
-                        Hierarchical Task Network Implementation
-                        in Unity, game inspired by 
-                        <i>Frogger</i> (Konami, 1981) 
-                    </div>
 
-                </a>
+</section>
 
-                <div class="tag-section">
-                    <div class="tag">
-                        ML
-                    </div>
-                    <div class="tag">
-                        Game Dev
-                    </div>
-                </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:emma.kondrup@mail.mcgill.ca">emma.kondrup@mail.mcgill.ca</a></p>
+        <p>GitHub: <a href="https://github.com/ekmpa" target="_blank">@ekmpa</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/emmakondrup" target="_blank">/in/emmakondrup</a></p>
+      </div>
+    </section>
+  </main>
 
-            </div>
-        </div>
-    </main>
-    
-    <script src="index.js"></script>
+  <footer>
+    &copy; 2025 Emma Kondrup. All rights reserved.
+  </footer>
 
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <script>
+    let isExpanded = false;
+
+    function toggleResearch() {
+        const hidden = document.querySelectorAll('.hidden-publication');
+        const icon = document.getElementById('toggle-icon');
+
+        hidden.forEach(card => {
+        card.style.display = isExpanded ? 'none' : 'block';
+        });
+
+        icon.textContent = isExpanded ? '▼' : '▲';
+        isExpanded = !isExpanded;
+    }
+    </script>
 </body>
+
 </html>
