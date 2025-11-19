@@ -198,6 +198,44 @@
     .toggle-research:hover {
     transform: scale(1.1);
     }
+
+    .news-item {
+      list-style: none;
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .news-item::before {
+      position: absolute;
+      left: 0;
+      top: 0.15rem;
+      font-size: 1.1rem;
+    }
+
+    .icon-event::before {
+      content: "🏛";
+    }
+
+    .icon-talk::before {
+      content: "🎙️"; 
+    }
+
+    .icon-paper::before {
+      content: "📄";
+    }
+
+    .icon-membership::before {
+      content: "👥";
+    }
+
+    .icon-teaching::before {
+      content: "📚";
+    }
+
+    .icon-media::before {
+      content: "🗞️";
+    }
   </style>
 </head>
 
@@ -215,10 +253,11 @@
 
   <nav>
     <!-- <a href="#about">About</a> -->
+    <a href="#news">News</a>
     <a href="#research">Research</a>
     <a href="#experience">Experience</a>
-    <a href="#talks">Talks</a>
-    <a href="#media">Media</a>
+    <!-- <a href="#talks">Talks</a>
+    <a href="#media">Media</a> -->
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
     
@@ -233,6 +272,88 @@
             <i>Temporal Graph Learning; Graph ML; ML for Information Integrity; AI in Health; AI, Health and Tech Law. </i>
       </div>
     </section> -->
+
+    <section id="news">
+        <h2>News</h2>
+        <li class="news-item icon-event">
+          <b>November 2025:</b> I attended the OECD's 2nd Annual Digital Trust Convention.
+        </li>
+        <li class="news-item icon-talk">
+          <b>November 2025:</b> My colleague Anne Imouza and I presented our work <i>Dr. Bias: Social Disparities in AI-Powered Medical Guidance</i> at the SMASH (Symposium on Model Accountability, Sustainability and Healthcare) Convention at Mila. 
+        </li>
+        <li class="news-item icon-event">
+          <b>November 2025:</b> I was a final judge at the McGill AI Society's Hackathon. 
+        </li>
+        <li class="news-item icon-talk">
+          <b>October 2025:</b> My colleague Anne Imouza and I presented our work <i>Dr. Bias: Social Disparities in AI-Powered Medical Guidance</i> at the IVADO Digital Futures Symposium. 
+          Digital Futures
+        </li>
+
+        <li class="news-item icon-membership">
+          <b>October 2025:</b> I have become a member of the <i>Observatoire international sur les impacts sociétaux de l'IA et du numérique</i> (OBVIA)'s student community.
+        </li>
+
+        <li class="news-item icon-membership">
+          <b>September 2025:</b> I have become a member of the <i>Centre pour l'Étude de la Citoyenneté Démocratique</i> (CÉCD)'s student community.
+        </li>
+
+        <li class="news-item icon-talk">
+          <b>August 2025:</b> I co-presented <i>Are Large Language Models Good Temporal Graph Learners?</i>&nbsp; with Shenyang Huang at the Temporal Graph Reading Group.
+        </li>
+
+        <li class="news-item icon-event">
+          <b>August 2025:</b> I attended IJCAI 2025 as a part of the volunteer team. 
+        </li>
+
+        <li class="news-item icon-talk">
+          <b>August 2025:</b> I presented  <i>Base3: a simple interpolation-based ensemble method for robust dynamic link prediction</i>&nbsp; at the Temporal Graph Learning Workshop @ KDD 2025.
+        </li>
+
+        <li class="news-item icon-paper">
+          <b>July 2025:</b> I wrote the piece <i>On the Perils of Technocracy</i>&nbsp; for the <i>CounterCritical</i>&nbsp; think tank.
+        </li>
+
+        <li class="news-item icon-event">
+          <b>June 2025:</b> I attended the Inter-CeBIL Annual Retreat as part of its program. 
+        </li>
+
+        <li class="news-item icon-talk">
+          <b>April 2025:</b> I presented my honours thesis <i>Instant-Curry: a Boundless Proof Auto-Grader for teaching Functional Programming Theory</i>&nbsp;, supervised by Prof. Jacob Errington, at the Conference of McGill's Epic Programming Language Systems.
+        </li>
+
+        <li class="news-item icon-paper">
+          <b>April 2025:</b> I wrote the piece <i>Informed Consent, Redefined: How AI and Big Data Are Changing the Rules</i>&nbsp; for the Harvard Law School's <i>Bill of Health</i>.
+        </li>
+
+        <li class="news-item icon-teaching">
+          <b>February 2025:</b> I led a <i>Python Libraries for Machine Learning</i>&nbsp; workshop at the McGill AI Society's 2025 Hackathon (the largest AI hackathon in Canada!). I was also a final judge. 
+        </li>
+
+        <li class="news-item icon-media">
+          <b>October 2024:</b> I was interviewed and quoted in <i><a href="https://usbeketrica.com/fr/article/demain-sera-t-on-discrimine-par-nos-genes">Usbek & Rica's</a></i>&nbsp; 43rd edition on genetic discrimination. 
+        
+        <li class="news-item icon-teaching">
+          <b>June 2024:</b> I gave a guest lecture at the <i>Université de Laval</i>&nbsp; for the MMO-7031 <i>"Enjeux éthiques, sociaux et légaux en médecine génétique de précision"</i>&nbsp; bioethics microcapsule.
+        </li>
+
+        <li class="news-item icon-membership">
+          <b>February 2024:</b> I have become a member of two of GA4GH's working groups (REWS: <i>Regulatory & Ethics Work Stream</i>); the one on Genetic Discrimination and the one on Generative AI and Machine Learning.
+        </li>
+
+        <li class="news-item icon-media">
+          <b>January 2024:</b> <i><a href="https://phys.org/news/2024-01-canadians-genetic-discrimination-federal-law.html">phys.org</a></i>&nbsp; released a press release on our 2023 <i>"Still using Genetic Data?"</i> article.
+        </li>
+
+        <li class="news-item icon-media">
+          <b>January 2024:</b> <i><a href="https://www.mcgill.ca/newsroom/channels/news/mcgill-study-finds-some-canadians-may-still-be-risk-genetic-discrimination-despite-new-federal-law-355104">The McGill Newsroom</a></i>&nbsp; released a press release on our 2023 <i>"Still using Genetic Data?"</i> article.
+        </li>
+
+        <li class="news-item icon-talk">
+          <b>December 2023:</b> I co-presented <i>The song remains the same? A comparative assessment of Canadian life insurance application forms post-GNDA</i>&nbsp; with Prof. Yann Joly at the GDO's 5th Annual Conference in Panama. 
+        </li>
+
+
+    </section>
 
     <section id="research">
   <h2>Research</h2>
@@ -410,7 +531,7 @@
 </section>
 
 
-<section id="talks">
+<!-- <section id="talks">
     <h2>Talks & teaching</h2>
 
     <div class="card">
@@ -465,9 +586,9 @@ dynamic link prediction</i>&nbsp; at the Temporal Graph Learning Workshop @ KDD 
             Co-presented <i>The song remains the same? A comparative assessment of Canadian life insurance application forms post-GNDA</i>&nbsp; with Yann Joly. 
         </p>
     </div>
-</section>
+</section> -->
 
-
+<!-- 
 <section id="media">
     <h2>Media & Groups</h2>
 
@@ -517,12 +638,18 @@ dynamic link prediction</i>&nbsp; at the Temporal Graph Learning Workshop @ KDD 
             Press release on the 2023 “Still using Genetic Data?” article.
         </em>
     </div>
-</section>
+</section> -->
 
 
 
 <section id="education">
     <h2>Education</h2>
+
+    <div class="card">
+        <strong>Technical Project Manager <span class="workplace">@ McGill AI Society</span></strong>
+        <div class="date-subtitle"> April 2024 - Present </div>
+        <p> Supervising students of <i>MAIS 202 - Accelerated Introduction to Machine Learning</i> &nbsp; and mentoring attendees of our Hackathons, for which I also act as Final Judge.</p>
+    </div>
 
     <div class="card">
         <strong>AI Safety<span class="workplace">@ Mila - Quebec AI Institute</span></strong>
