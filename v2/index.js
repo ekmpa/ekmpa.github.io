@@ -1,9 +1,9 @@
 const nodes = [
-    { id: "LinkedIn", url: "https://www.linkedin.com/in/emmakondrup/", image: "./media/linkedin.png" },
-    { id: "GitHub", url: "https://github.com/ekmpa", image: "./media/github.png" },
-    { id: "Email", url: "mailto:emmakndp@gmail.com", image: "./media/email.png" },
-    { id: "CV", url: "./media/cv.png", image: "./media/cv.png" },
-    { id: "Scholar", url: "https://scholar.google.com/citations?user=Ov-LMukAAAAJ&hl=fr&oi=ao", image: "./media/scholar.png" }
+    { id: "LinkedIn", url: "https://www.linkedin.com/in/emmakondrup/", image: "../media/linkedin.png" },
+    { id: "GitHub", url: "https://github.com/ekmpa", image: "../media/github.png" },
+    { id: "Email", url: "mailto:emma.kondrup@mila.quebec", image: "../media/email.png" },
+    { id: "CV", url: "../media/CV.pdf", image: "../media/cv.png" },
+    { id: "Scholar", url: "https://scholar.google.com/citations?user=Ov-LMukAAAAJ&hl=fr&oi=ao", image: "../media/scholar.png" }
 ];
 
 // Function to generate random links ensuring no node has zero neighbors
@@ -70,7 +70,7 @@ const simulation = d3.forceSimulation(nodes)
 
 const handleDownload = () => {
     const a = document.createElement("a");
-    a.href = "./media/CV.pdf";
+    a.href = "../media/CV.pdf";
     a.download = "Emma-Kondrup-CV.pdf";
     a.click();
 };
