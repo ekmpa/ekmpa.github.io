@@ -204,7 +204,19 @@
       text-underline-offset: 2px;
     }
 
+    #publications .card strong a {
+      text-decoration: none;
+    }
+
+    #publications .card.clickable-publication {
+      cursor: pointer;
+    }
+
     .hidden-publication {
+      display: none;
+    }
+
+    .hidden-experience {
       display: none;
     }
 
@@ -263,9 +275,9 @@
 
   <nav>
     <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
     <a href="#experience">Experience</a>
     <a href="#activities">Activities</a>
+    <a href="#publications">Publications</a>
     <a href="#teaching">Supervision</a>
     <a href="#media">Media</a>
     <a href="#contact">Contact</a>
@@ -275,24 +287,49 @@
     <section id="education">
       <h2>Education</h2>
       <div class="card"><strong>Ph.D., Computer Science <span class="workplace">@ McGill University</span></strong><div class="date-subtitle">2026 - Present</div></div>
-      <div class="card"><strong>B.Sc. (Honours), Computer Science <span class="workplace">@ McGill University</span></strong><div class="date-subtitle">2022 - 2025</div></div>
+      <div class="card"><strong>B.Sc. Honours, Computer Science <span class="workplace">@ McGill University</span></strong><div class="date-subtitle">2022 - 2025</div></div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card"><strong>Web Developer <span class="workplace">@ Centre for the Study of Democratic Citizenship (CSDC), McGill University</span></strong><div class="date-subtitle">February 2026 - Present</div><p>Under Prof. Dietlind Stolle.</p></div>
+      <div class="card"><strong>Research Assistant <span class="workplace">@ Centre for Advanced Studies in Bioscience Innovation Law (CeBIL), University of Copenhagen</span></strong><div class="date-subtitle">July 2024 - Present</div><p>Under Profs. Timo Minssen and Marcelo Corrales Compagnucci.</p></div>
+      <div class="card"><strong>Student Researcher <span class="workplace">@ Complex Data Lab, Mila</span></strong><div class="date-subtitle">May 2025 - Dec 2025</div><p>Supervised by Prof. Reihaneh Rabbany.</p></div>
+      <div class="card hidden-experience"><strong>Research Assistant <span class="workplace">@ Genetic Discrimination Observatory</span></strong><div class="date-subtitle">Dec 2022 - Aug 2024</div></div>
+      <div class="card hidden-experience"><strong>Research Assistant <span class="workplace">@ Centre for Genomics and Policy, McGill</span></strong><div class="date-subtitle">Dec 2022 - Aug 2024</div><p>Supervised by Prof. Yann Joly.</p></div>
+      <div class="card hidden-experience"><strong>Research Intern <span class="workplace">@ DIKU, University of Copenhagen</span></strong><div class="date-subtitle">May 2023 - Jun 2023</div><p>Software Engineering and Formal Methods Research Group; supervised by Prof. Boris Dudder.</p></div>
+      <div class="card hidden-experience"><strong>Research Intern <span class="workplace">@ Universite Libre de Bruxelles</span></strong><div class="date-subtitle">Feb 2020</div><p>Centre for Research in Cognition and Neurosciences; supervised by Prof. Fabienne Chetail.</p></div>
+
+      <div class="toggle-publications" onclick="toggleExperience()">
+        <span id="toggle-experience-icon">▼</span>
+      </div>
+    </section>
+
+    <section id="activities">
+      <h2>Academic Activities</h2>
+      <div class="card"><strong>Co-organizer <a class="workplace" href="https://shenyanghuang.github.io/rg.html" target="_blank" rel="noopener">@ Temporal Graph Learning (TGL) Reading Group</a></strong><div class="date-subtitle">2025</div></div>
+      <div class="card"><strong>Student Research Community Member <a class="workplace" href="https://www.obvia.ca" target="_blank" rel="noopener">@ OBVIA</a></strong><div class="date-subtitle">Winter 2026 - Present</div></div>
+      <div class="card"><strong>Student Research Community Member <a class="workplace" href="https://csdc-cecd.ca/en/" target="_blank" rel="noopener">@ CSDC</a></strong><div class="date-subtitle">Winter 2026 - Present</div></div>
+      <div class="card"><strong>Research Fellowship <a class="workplace" href="https://www.building21.ca/scholars/beatrice-metwalli-emma-kondrup" target="_blank" rel="noopener">@ Building 21, McGill</a></strong><div class="date-subtitle">Winter 2026</div></div>
+      <div class="card"><strong>IOP Peer Review Excellence Course <span class="workplace">@ IOP Publishing</span></strong><div class="date-subtitle">Winter 2025</div></div>
+      <div class="card"><strong>Member, AI and ML Research Workstream <span class="workplace">@ GA4GH</span></strong><div class="date-subtitle">Winter 2024 - Fall 2026</div></div>
     </section>
 
     <section id="publications">
       <h2>Publications</h2>
       <h3>Selected media contributions</h3>
-      <div class="card"><strong>Protecting Humans in the Age of Deepfakes</strong><em>Mila Blog, 2026 - Catherine Regis, Emma Kondrup, Clare Mulrooney</em></div>
-      <div class="card"><strong>Informed Consent, Redefined: How AI and Big Data Are Changing the Rules</strong><em>Harvard Bill of Health, 2025 - Emma Kondrup</em></div>
+      <div class="card"><strong><a href="https://mila.quebec/en/insight/protecting-humans-in-the-age-of-deepfakes" target="_blank" rel="noopener">Protecting Humans in the Age of Deepfakes</a></strong><em>Mila Blog, 2026 - Catherine Regis, Emma Kondrup, Clare Mulrooney</em></div>
+      <div class="card"><strong><a href="https://petrieflom.law.harvard.edu/2025/04/11/informed-consent-redefined-how-ai-and-big-data-are-changing-the-rules/" target="_blank" rel="noopener">Informed Consent, Redefined: How AI and Big Data Are Changing the Rules</a></strong><em>Harvard Bill of Health, 2025 - Emma Kondrup</em></div>
 
-      <h3>Peer-reviewed</h3>
-      <div class="card"><strong>CrediBench: Building Web-Scale Network Datasets for Information Integrity</strong><em>NeurIPS NPGML Workshop, 2025</em></div>
-      <div class="card"><strong>Dr. Bias: Social Disparities in AI-Powered Medical Guidance</strong><em>SMASH + IVADO Digital Futures, 2025</em></div>
-      <div class="card"><strong>Self-Exploring Language Models for Explainable Link Forecasting on Temporal Graphs via Reinforcement Learning</strong><em>NeurIPS NPGML Workshop, 2025</em></div>
-      <div class="card hidden-publication"><strong>Are Large Language Models Good Temporal Graph Learners?</strong><em>NeurIPS NPGML Workshop, 2025</em></div>
-      <div class="card hidden-publication"><strong>Base3: A Simple Interpolation-Based Ensemble Method for Robust Dynamic Link Prediction</strong><em>Temporal Graph Learning Workshop at KDD, 2025</em></div>
-      <div class="card hidden-publication"><strong>The Key Features of a Genetic Nondiscrimination Policy: A Delphi Consensus Statement</strong><em>JAMA Network Open, 2024</em></div>
-      <div class="card hidden-publication"><strong>The Ethical Issues Associated with the Use of Genetic Ancestry in Genomics Research: A Mixed-Methods Systematic Literature Review</strong><em>Master's thesis, McGill University, 2024</em></div>
-      <div class="card hidden-publication"><strong>Still Using Genetic Data? A Comparative Review of Canadian Life Insurance Application Forms Before and After the GNDA</strong><em>FACETS, 2023</em></div>
+      <h3 style="margin-top: 1.5rem;">Peer-reviewed</h3>
+        <div class="card"><strong><a href="https://arxiv.org/abs/2509.23340" target="_blank" rel="noopener">CrediBench: Building Web-Scale Network Datasets for Information Integrity</a></strong><em>NeurIPS NPGML Workshop, 2025 & KDD, 2026</em></div>
+        <div class="card"><strong><a href="https://arxiv.org/abs/2510.09162" target="_blank" rel="noopener">Dr. Bias: Social Disparities in AI-Powered Medical Guidance</a></strong><em>SMASH + IVADO Digital Futures, 2025</em></div>
+      <div class="card"><strong><a href="https://arxiv.org/abs/2509.00975" target="_blank" rel="noopener">Self-Exploring Language Models for Explainable Link Forecasting on Temporal Graphs via Reinforcement Learning</a></strong><em>NeurIPS NPGML Workshop, 2025</em></div>
+      <div class="card hidden-publication"><strong><a href="https://arxiv.org/abs/2506.05393" target="_blank" rel="noopener">Are Large Language Models Good Temporal Graph Learners?</a></strong><em>NeurIPS NPGML Workshop, 2025</em></div>
+      <div class="card hidden-publication"><strong><a href="https://arxiv.org/abs/2506.12764" target="_blank" rel="noopener">Base3: A Simple Interpolation-Based Ensemble Method for Robust Dynamic Link Prediction</a></strong><em>Temporal Graph Learning Workshop at KDD, 2025</em></div>
+      <div class="card hidden-publication"><strong><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2824110" target="_blank" rel="noopener">The Key Features of a Genetic Nondiscrimination Policy: A Delphi Consensus Statement</a></strong><em>JAMA Network Open, 2024</em></div>
+      <div class="card hidden-publication"><strong><a href="https://www.genomicsandpolicy.org/Ressources/32.pdf" target="_blank" rel="noopener">The Ethical Issues Associated with the Use of Genetic Ancestry in Genomics Research: A Mixed-Methods Systematic Literature Review</a></strong><em>Master's thesis, McGill University, 2024</em></div>
+      <div class="card hidden-publication"><strong><a href="https://www.facetsjournal.com/doi/10.1139/facets-2023-0101" target="_blank" rel="noopener">Still Using Genetic Data? A Comparative Review of Canadian Life Insurance Application Forms Before and After the GNDA</a></strong><em>FACETS, 2023</em></div>
       <div class="card hidden-publication"><strong>Public Opinion Survey on Telemedicine Care Delivery in Quebec</strong><em>Ministry of Health and Social Services of Quebec report, 2023</em></div>
 
       <div class="toggle-publications" onclick="togglePublications()">
@@ -300,30 +337,11 @@
       </div>
     </section>
 
-    <section id="experience">
-      <h2>Research and Professional Experience</h2>
-      <div class="card"><strong>Research Assistant <span class="workplace">@ CeBIL, University of Copenhagen</span></strong><div class="date-subtitle">July 2024 - Present</div><p>Under Profs. Timo Minssen and Marcelo Corrales Compagnucci.</p></div>
-      <div class="card"><strong>Student Researcher <span class="workplace">@ Complex Data Lab, Mila</span></strong><div class="date-subtitle">May 2025 - Dec 2025</div><p>Supervised by Prof. Reihaneh Rabbany.</p></div>
-      <div class="card"><strong>Research Assistant <span class="workplace">@ Genetic Discrimination Observatory</span></strong><div class="date-subtitle">Dec 2022 - Aug 2024</div></div>
-      <div class="card"><strong>Research Assistant <span class="workplace">@ Centre for Genomics and Policy, McGill</span></strong><div class="date-subtitle">Dec 2022 - Aug 2024</div><p>Supervised by Prof. Yann Joly.</p></div>
-      <div class="card"><strong>Research Intern <span class="workplace">@ DIKU, University of Copenhagen</span></strong><div class="date-subtitle">May 2023 - Jun 2023</div><p>Software Engineering and Formal Methods Research Group; supervised by Prof. Boris Dudder.</p></div>
-      <div class="card"><strong>Research Intern <span class="workplace">@ Universite Libre de Bruxelles</span></strong><div class="date-subtitle">Feb 2020</div><p>Centre for Research in Cognition and Neurosciences; supervised by Prof. Fabienne Chetail.</p></div>
-    </section>
-
-    <section id="activities">
-      <h2>Academic Activities</h2>
-      <div class="card"><strong>Student Research Community Member <span class="workplace">@ OBVIA</span></strong><div class="date-subtitle">Winter 2026 - Present</div></div>
-      <div class="card"><strong>Student Research Community Member <span class="workplace">@ CSDC</span></strong><div class="date-subtitle">Winter 2026 - Present</div></div>
-      <div class="card"><strong>Research Fellowship <span class="workplace">@ Building 21, McGill</span></strong><div class="date-subtitle">Winter 2026</div></div>
-      <div class="card"><strong>IOP Peer Review Excellence Course <span class="workplace">@ IOP Publishing</span></strong><div class="date-subtitle">Winter 2025</div></div>
-      <div class="card"><strong>Member, AI and ML Research Workstream <span class="workplace">@ GA4GH</span></strong><div class="date-subtitle">Winter 2024 - Fall 2026</div></div>
-    </section>
-
     <section id="teaching">
       <h2>Supervision and Teaching</h2>
-      <div class="card"><strong>Intern Supervision: Tong Wu <span class="workplace">@ Complex Data Lab, Mila</span></strong><div class="date-subtitle">Winter 2026 - Present</div></div>
-      <div class="card"><strong>Technical Project Manager / TA (MAIS 202) <span class="workplace">@ McGill AI Society</span></strong><div class="date-subtitle">Fall 2024 - Present</div></div>
-      <div class="card"><strong>Guest Lecturer <span class="workplace">@ Universite Laval</span></strong><div class="date-subtitle">Fall 2024</div><p><i>Enjeux ethiques, sociaux et legaux en medecine genetique de precision</i> (MMO-7031).</p></div>
+      <div class="card"><strong>Intern Supervision: Tong Wu <span class="workplace">@ Complex Data Lab, Mila</span></strong><div class="date-subtitle">Winter 2026</div></div>
+      <div class="card"><strong>Technical Project Manager / TA (MAIS 202) <span class="workplace">@ McGill AI Society</span></strong><div class="date-subtitle">Fall 2024 - Winter 2026</div></div>
+      <div class="card"><strong>Guest Lecturer <span class="workplace">@ Universite Laval</span></strong><div class="date-subtitle">Fall 2024</div><p><i>Enjeux ethiques, sociaux et legaux en medecine genetique de precision (MMO-7031).</i> </p></div>
     </section>
 
     <section id="media">
@@ -336,7 +354,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p>Email: <a href="mailto:emma.kondrup@mila.quebec">emma.kondrup@mila.quebec</a></p>
+        <p>Email: <a href="mailto:emma.kondrup@mail.mcgill.ca">emma.kondrup@mail.mcgill.ca</a></p>
         <p>GitHub: <a href="https://github.com/ekmpa" target="_blank" rel="noopener">@ekmpa</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/emmakondrup" target="_blank" rel="noopener">/in/emmakondrup</a></p>
       </div>
@@ -368,14 +386,194 @@
     const width = 320;
     const height = 220;
 
+    const crossingPair = { a: 'LinkedIn', b: 'GitHub', c: 'CV', d: 'Email' };
+    const crossCenter = {
+      x: width * (0.44 + Math.random() * 0.12),
+      y: height * (0.42 + Math.random() * 0.16)
+    };
+    const theta = Math.random() * Math.PI;
+    const arm1 = 50 + Math.random() * 14;
+    const arm2 = 46 + Math.random() * 16;
+    const dir1 = { x: Math.cos(theta), y: Math.sin(theta) };
+    const dir2 = { x: -Math.sin(theta), y: Math.cos(theta) };
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    const crossingTargets = {
+      LinkedIn: {
+        x: clamp(crossCenter.x - dir1.x * arm1, 34, width - 34),
+        y: clamp(crossCenter.y - dir1.y * arm1, 34, height - 34)
+      },
+      GitHub: {
+        x: clamp(crossCenter.x + dir1.x * arm1, 34, width - 34),
+        y: clamp(crossCenter.y + dir1.y * arm1, 34, height - 34)
+      },
+      CV: {
+        x: clamp(crossCenter.x - dir2.x * arm2, 34, width - 34),
+        y: clamp(crossCenter.y - dir2.y * arm2, 34, height - 34)
+      },
+      Email: {
+        x: clamp(crossCenter.x + dir2.x * arm2, 34, width - 34),
+        y: clamp(crossCenter.y + dir2.y * arm2, 34, height - 34)
+      },
+      Scholar: {
+        x: clamp(width * (0.42 + Math.random() * 0.16), 34, width - 34),
+        y: clamp(height * (0.45 + Math.random() * 0.2), 34, height - 34)
+      }
+    };
+
+    graphNodes.forEach(node => {
+      const target = crossingTargets[node.id];
+      node.x = target.x + (Math.random() - 0.5) * 16;
+      node.y = target.y + (Math.random() - 0.5) * 16;
+      node.renderSize = 40;
+      node.targetSize = 40;
+    });
+
+    let hoveredNode = null;
+
+    function setHoveredNode(nextNode) {
+      if (hoveredNode && hoveredNode !== nextNode) {
+        hoveredNode.targetSize = 40;
+      }
+
+      hoveredNode = nextNode;
+
+      if (hoveredNode) {
+        hoveredNode.targetSize = 46;
+        simulation.alphaTarget(0.22).restart();
+      } else {
+        simulation.alphaTarget(0);
+      }
+    }
+
+    function orientation(p, q, r) {
+      return (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
+    }
+
+    function segmentsCross(p1, p2, p3, p4) {
+      const o1 = Math.sign(orientation(p1, p2, p3));
+      const o2 = Math.sign(orientation(p1, p2, p4));
+      const o3 = Math.sign(orientation(p3, p4, p1));
+      const o4 = Math.sign(orientation(p3, p4, p2));
+      return o1 !== 0 && o2 !== 0 && o3 !== 0 && o4 !== 0 && o1 !== o2 && o3 !== o4;
+    }
+
+    function forceKeepCrossing() {
+      let nodesById = new Map();
+
+      function force(alpha) {
+        const a = nodesById.get(crossingPair.a);
+        const b = nodesById.get(crossingPair.b);
+        const c = nodesById.get(crossingPair.c);
+        const d = nodesById.get(crossingPair.d);
+
+        if (!a || !b || !c || !d || segmentsCross(a, b, c, d)) {
+          return;
+        }
+
+        const strength = 0.0025 * (1 + alpha * 2.2);
+        [
+          { node: a, target: crossingTargets[crossingPair.a] },
+          { node: b, target: crossingTargets[crossingPair.b] },
+          { node: c, target: crossingTargets[crossingPair.c] },
+          { node: d, target: crossingTargets[crossingPair.d] }
+        ].forEach(({ node, target }) => {
+          if (node.fx == null) {
+            node.vx += (target.x - node.x) * strength;
+            node.vy += (target.y - node.y) * strength;
+          }
+        });
+      }
+
+      force.initialize = nodes => {
+        nodesById = new Map(nodes.map(n => [n.id, n]));
+      };
+
+      return force;
+    }
+
+    function forceHoverRepel() {
+      let nodes = [];
+
+      function force(alpha) {
+        if (!hoveredNode) {
+          return;
+        }
+
+        const radius = 132;
+        const influenceMap = new Map();
+
+        nodes.forEach(node => {
+          if (node === hoveredNode) {
+            return;
+          }
+
+          const dx = node.x - hoveredNode.x;
+          const dy = node.y - hoveredNode.y;
+          const dist = Math.hypot(dx, dy) || 0.0001;
+
+          if (dist >= radius) {
+            return;
+          }
+
+          const falloff = 1 - dist / radius;
+          influenceMap.set(node, falloff);
+
+          const strength = 0.125 * falloff * falloff * (0.65 + alpha);
+          if (node.fx == null) {
+            node.vx += (dx / dist) * strength;
+            node.vy += (dy / dist) * strength;
+          }
+        });
+
+        // Diffuse ripple: nodes influenced by the hover softly repel their local neighbors.
+        influenceMap.forEach((sourceInfluence, sourceNode) => {
+          const rippleRadius = 72;
+
+          nodes.forEach(targetNode => {
+            if (targetNode === sourceNode || targetNode === hoveredNode) {
+              return;
+            }
+
+            const dx = targetNode.x - sourceNode.x;
+            const dy = targetNode.y - sourceNode.y;
+            const dist = Math.hypot(dx, dy) || 0.0001;
+
+            if (dist >= rippleRadius) {
+              return;
+            }
+
+            const rippleFalloff = 1 - dist / rippleRadius;
+            const strength = 0.03 * sourceInfluence * rippleFalloff * rippleFalloff * (0.55 + alpha);
+            if (targetNode.fx == null) {
+              targetNode.vx += (dx / dist) * strength;
+              targetNode.vy += (dy / dist) * strength;
+            }
+          });
+        });
+      }
+
+      force.initialize = simulationNodes => {
+        nodes = simulationNodes;
+      };
+
+      return force;
+    }
+
     const svg = d3.select('#link-graph')
       .attr('width', width)
       .attr('height', height);
 
     const simulation = d3.forceSimulation(graphNodes)
+      .randomSource(Math.random)
       .force('link', d3.forceLink(graphLinks).id(d => d.id).distance(90))
       .force('charge', d3.forceManyBody().strength(-220))
-      .force('center', d3.forceCenter(width / 2, height / 2.2))
+      .force('center', d3.forceCenter(width / 2, height / 1.95))
+      .force('keep-crossing', forceKeepCrossing())
+      .force('hover-repel', forceHoverRepel())
       .force('collide', d3.forceCollide().radius(30));
 
     const link = svg.selectAll('line')
@@ -394,6 +592,12 @@
       .attr('width', 40)
       .attr('height', 40)
       .attr('cursor', 'pointer')
+      .on('mouseenter', (_, d) => setHoveredNode(d))
+      .on('mouseleave', (_, d) => {
+        if (hoveredNode === d) {
+          setHoveredNode(null);
+        }
+      })
       .call(d3.drag()
         .on('start', dragStarted)
         .on('drag', dragged)
@@ -410,6 +614,13 @@
       });
 
     simulation.on('tick', () => {
+      graphNodes.forEach(d => {
+        d.renderSize += (d.targetSize - d.renderSize) * 0.2;
+        const half = d.renderSize / 2 + 4;
+        d.x = clamp(d.x, half, width - half);
+        d.y = clamp(d.y, half, height - half);
+      });
+
       link
         .attr('x1', d => d.source.x)
         .attr('y1', d => d.source.y)
@@ -417,8 +628,10 @@
         .attr('y2', d => d.target.y);
 
       node
-        .attr('x', d => d.x - 20)
-        .attr('y', d => d.y - 20);
+        .attr('width', d => d.renderSize)
+        .attr('height', d => d.renderSize)
+        .attr('x', d => d.x - d.renderSize / 2)
+        .attr('y', d => d.y - d.renderSize / 2);
     });
 
     function dragStarted(event, d) {
@@ -439,6 +652,7 @@
     }
 
     let publicationsExpanded = false;
+    let experienceExpanded = false;
 
     function togglePublications() {
       const hidden = document.querySelectorAll('.hidden-publication');
@@ -451,6 +665,33 @@
       icon.textContent = publicationsExpanded ? '▼' : '▲';
       publicationsExpanded = !publicationsExpanded;
     }
+
+    function toggleExperience() {
+      const hidden = document.querySelectorAll('.hidden-experience');
+      const icon = document.getElementById('toggle-experience-icon');
+
+      hidden.forEach(item => {
+        item.style.display = experienceExpanded ? 'none' : 'block';
+      });
+
+      icon.textContent = experienceExpanded ? '▼' : '▲';
+      experienceExpanded = !experienceExpanded;
+    }
+
+    document.querySelectorAll('#publications .card').forEach(card => {
+      const link = card.querySelector('strong a[href]');
+      if (!link) {
+        return;
+      }
+
+      card.classList.add('clickable-publication');
+      card.addEventListener('click', event => {
+        if (event.target.closest('a')) {
+          return;
+        }
+        window.open(link.href, '_blank');
+      });
+    });
 
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
